@@ -1,28 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tomar Caso</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  </head>
-  <body style="margin:5px;">
-    <h2>Tomar Caso</h2>
 
-    <h2 style="font-size:15px;">Ingrese su número de Legajo</h2>
-    <input type="text" name="" value="12345" width="500px">
-    <button onclick="confirmarLegajo()">Buscar casos</button>
+<head>
+  <meta charset="utf-8">
+  <title>Tomar Caso</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
 
+    th,
+    td {
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body style="margin:5px;" onload="hide()">
+  <h2>Tomar Caso</h2>
+
+  <h2 style="font-size:15px;">Ingrese su número de Legajo</h2>
+  <input type="text" name="" value="12345" width="500px">
+  <button onclick="confirmarLegajo()">Buscar casos</button>
+
+  <div id="tabla">
     <h2 style="font-size:15px;">Seleccione un caso de la bandeja</h2>
-    
 
-    <script>
-      function confirmarLegajo() {
-        alert("El legajo del especialista es válido y corresponde a Juan Perez");
+    <table border="1" style="left-padding: 15px;">
+      <thead>
+        <tr>
+          <th>Numero de Reclamo</th>
+          <th>Paso Actual</th>
+          <th>Seleccionar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345</td>
+          <td>1</td>
+          <td><button onclick="confirmarCaso()">Seleccionar</button></td>
+        </tr>
+        <tr>
+          <td>98765</td>
+          <td>7</td>
+          <td><button onclick="confirmarCaso()">Seleccionar</button></td>
+        </tr>
+        <tr>
+          <td>17395</td>
+          <td>8</td>
+          <td><button onclick="confirmarCaso()">Seleccionar</button></td>
+        </tr>
+        <tr>
+          <td>84950</td>
+          <td>2</td>
+          <td><button onclick="confirmarCaso()">Seleccionar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function confirmarLegajo() {
+      alert("El legajo del especialista es válido y corresponde a Juan Perez");
+      hide();
+    }
+
+    function confirmarCaso() {
+      alert("Instancia asignada con éxito");
+    }
+
+    function hide() {
+      var x = document.getElementById("tabla");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
       }
-      function confirmarCaso() {
-        alert("Instancia asignada con éxito");
-      }
+    }
   </script>
 
-  </body>
+</body>
+
 </html>
