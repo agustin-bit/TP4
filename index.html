@@ -2,33 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Entrar al Sistema</title>
+    <title>Tomar Caso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
-  <body>
-    <h1>Ingreso al Sistema</h1>
-    <br>
-    <hr>
-    <br>
-    <form class="" action="lista.html">
-      <br>
-      <label>Ingrese su Número de Legajo:</label>
-      <br>
-      <br>
-      <input type="number" name="" value="">
-      <br>
-      <br>
-      <input type="submit" name="">
-    </form>
-    
-    <button onclick="myFunction()">Try it</button>
+  <body style="margin:5px;">
+    <h2>Tomar Caso</h2>
 
-<script>
-function myFunction() {
-  alert("Hello\nHow are you?");
-}
-</script>
+    <h2 style="font-size:15px;">Ingrese su número de Legajo</h2>
+    <input type="text" name="" value="12345" width="500px">
+    <button onclick="confirmarLegajo()">Buscar casos</button>
+
+    <h2 style="font-size:15px;">Seleccione un caso de la bandeja</h2>
     
-  </body> 
-  
-  
+
+    <script>
+      function confirmarLegajo() {
+        alert("El legajo del especialista es válido y corresponde a Juan Perez");
+      }
+      function confirmarCaso() {
+        alert("Instancia asignada con éxito");
+      }
+  </script>
+
+  </body>
 </html>
